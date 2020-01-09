@@ -1,21 +1,21 @@
 pipeline {
-//    def mvnHome = tool 'M3'
     agent any 
     environment {
-//      mvnHome = "/usr/share/maven"
-      mvnHome = "tool "M3"'
-        testenv = "test"
+      mvnHome = "/usr/share/maven"
+    }
+    tools {
+        maven 'mavenHome'
+        jdk 'JavaHome'
     }
     stages {
         stage('git') {
             steps {
                 sh "git clone https://github.com/jglick/simple-maven-project-with-tests.git"
-//                def mvnHome = tool 'M3'
             }
         }
         stage('Build') {
             steps {
-                sh "${mvnHome}/bin/mvn -B install"
+                sh "/usr/share/maven/bin/mvn -f my-app/pom.xml clean install"
             }
         }
     }
