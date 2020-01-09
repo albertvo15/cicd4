@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
+    agent { None }
     stages {
         stage('git') {
             steps {
-                sh 'git clone 'https://github.com/jglick/simple-maven-project-with-tests.git'
+                sh "git clone https://github.com/jglick/simple-maven-project-with-tests.git"
                 def mvnHome = tool 'M3'
             }
         }
