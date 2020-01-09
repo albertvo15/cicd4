@@ -13,7 +13,8 @@ pipeline {
         stage('git') {
             steps {
 //                sh "git clone https://github.com/jglick/simple-maven-project-with-tests.git"
-                git url: 'https://github.com/jglick/simple-maven-project-with-tests.git'
+//                git url: 'https://github.com/jglick/simple-maven-project-with-tests.git'
+                git url: 'https://github.com/w3c/epubcheck.git'
             }
         }
         stage('Build') {
@@ -21,7 +22,6 @@ pipeline {
 //                sh "/usr/share/maven/bin/mvn -f my-app/pom.xml clean install"
 //                sh 'mvn -f my-app/pom.xml clean install'
 //                sh 'mvn install'
-                sh 'cd my-app'
                 sh 'mvn clean install'
             }
         }
