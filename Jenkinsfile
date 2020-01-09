@@ -1,10 +1,13 @@
 pipeline {
     agent any 
+    environment {
+      mvnHome = "/usr/share/maven"
+    }
     stages {
         stage('git') {
             steps {
                 sh "git clone https://github.com/jglick/simple-maven-project-with-tests.git"
-                def mvnHome = tool 'M3'
+//                def mvnHome = tool 'M3'
             }
         }
         stage('Build') {
