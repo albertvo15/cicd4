@@ -12,7 +12,8 @@ pipeline {
     stages {
         stage('git') {
             steps {
-                sh "git clone https://github.com/jglick/simple-maven-project-with-tests.git"
+//                sh "git clone https://github.com/jglick/simple-maven-project-with-tests.git"
+                git url: 'https://github.com/jglick/simple-maven-project-with-tests.git'
             }
         }
         stage('Build') {
