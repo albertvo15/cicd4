@@ -1,6 +1,13 @@
-node {
-  echo "hello 2"
-  git url: 'https://github.com/jglick/simple-maven-project-with-tests.git'
-  def mvnHome = tool 'M3'
-  sh "${mvnHome}/bin/mvn -B verify"
+
+node ("windows") {
+  stage ('Build') {
+ 
+    git url: 'https://github.com/cyrille-leclerc/multi-module-maven-project'
+ 
+    withMaven(...) {
+ 
+      bat "mvn clean install"
+ 
+    } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
+  }
 }
