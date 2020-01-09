@@ -19,7 +19,8 @@ pipeline {
         stage('Build') {
             steps {
 //                sh "/usr/share/maven/bin/mvn -f my-app/pom.xml clean install"
-                sh 'mvn -f my-app/pom.xml clean install'
+//                sh 'mvn -f my-app/pom.xml clean install'
+                sh 'mvn install'
             }
         }
     }
