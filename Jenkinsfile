@@ -5,9 +5,9 @@ pipeline {
     }
     tools {
 //        maven 'mavenHome'
-//        maven 'Maven3'
-        maven 'maven 3'
-        jdk 'JavaHome'
+        maven 'Maven3'
+//        maven 'maven 3'
+//        jdk 'JavaHome'
     }
     stages {
         stage('git') {
