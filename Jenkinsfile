@@ -5,7 +5,8 @@ pipeline {
     }
     tools {
 //        maven 'mavenHome'
-        maven 'Maven3'
+//        maven 'Maven3'
+        maven 'maven 3'
         jdk 'JavaHome'
     }
     stages {
