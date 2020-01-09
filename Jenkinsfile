@@ -1,8 +1,9 @@
 pipeline {
-    def mvnHome = tool 'M3'
+//    def mvnHome = tool 'M3'
     agent any 
     environment {
 //      mvnHome = "/usr/share/maven"
+      mvnHome = "tool "M3"'
         testenv = "test"
     }
     stages {
