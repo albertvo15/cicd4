@@ -4,7 +4,8 @@ pipeline {
       mvnHome = "/usr/share/maven"
     }
     tools {
-        maven 'mavenHome'
+//        maven 'mavenHome'
+        maven 'Maven3'
         jdk 'JavaHome'
     }
     stages {
