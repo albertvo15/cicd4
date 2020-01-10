@@ -25,7 +25,7 @@ pipeline {
         stage('Build2') {
             steps {
                   dir("my-app"){
-                    sh 'mvn clean install
+                    sh 'mvn clean install'
                   }
 //                  sh 'mvn clean verify
             }
