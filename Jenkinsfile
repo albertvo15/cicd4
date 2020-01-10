@@ -4,10 +4,7 @@ pipeline {
       mvnHome = "/usr/share/maven"
     }
     tools {
-//        maven 'mavenHome'
         maven 'Maven3'
-//        maven 'maven 3'
-//        jdk 'JavaHome'
     }
     stages {
         stage('git') {
@@ -24,6 +21,11 @@ pipeline {
 //                sh 'mvn install'
                 sh 'mvn clean install'
             }
+        }
+        stage('Build2') {
+            steps {
+                sh 'cd my-app'
+                sh 'mvn clean install'
         }
     }
 }
