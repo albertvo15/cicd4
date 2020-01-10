@@ -26,6 +26,7 @@ pipeline {
             steps {
                 sh 'cd my-app'
                 sh 'mvn clean install'
+            }
         }
     }
 }
