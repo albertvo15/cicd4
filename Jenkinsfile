@@ -33,10 +33,6 @@ pipeline {
 //                sh 'mvn clean install'
 //            }
 
-dir("project_templates/java_project_template"){
-sh 'mvn clean verify
- 
-}
         }
     }
 }
